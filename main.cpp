@@ -29,7 +29,7 @@ public:
         Song* newSong = new Song(title, artist);
         if (!firstSong) {
             firstSong = newSong;
-            currentSong = newSong;  // Set the current song to the first song if it's the only song.
+            currentSong = newSong; 
         } else {
             Song* lastSong = firstSong;
             while (lastSong->nextSong) {
@@ -44,7 +44,7 @@ public:
         Song* current = firstSong;
         while (current) {
             if (current->title == title && current->artist == artist) {
-                return true;  // Song with the same title and artist is already in the playlist.
+                return true;  
             }
             current = current->nextSong;
         }
@@ -84,7 +84,7 @@ public:
         }
 
         if (selectedSong) {
-            // Update pointers to remove the selected song
+            
             if (selectedSong->prevSong) {
                 selectedSong->prevSong->nextSong = selectedSong->nextSong;
             } else {
